@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
-import Quiz from './components/Quiz';
+import logo from './MonkeyLogo.svg';
+import '../css/Quiz.css';
+import Quiz from '../components/Quiz';
 import quizQuestions from './api/quizQuestions';
-import Result from './components/Result';
+import Result from '../components/Result';
 import update from 'react-addons-update';
 
-class App extends Component {
+class MonkeyQuiz extends Component {
   constructor(props) {
     super(props);
     this.handleAnswerSelected = this.handleAnswerSelected.bind(this);
@@ -68,11 +68,14 @@ class App extends Component {
   }
 
   setResults (result) {
+    var resultText = 'You prefer ';
     if (result.length > 0) {
-      this.setState({ result: result[0] });
+      resultText += result[0];
     } else {
-      this.setState({ result: 'Undetermined' });
+      resultText += 'undetermined';
     }
+
+    this.setState({ result: resultText });
   }
 
   handleAnswerSelected(event) {
@@ -149,4 +152,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default MonkeyQuiz;
