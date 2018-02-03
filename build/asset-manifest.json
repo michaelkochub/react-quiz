@@ -1,8 +1,9 @@
 {
-  "main.css": "static/css/main.576d212e.css",
-  "main.css.map": "static/css/main.576d212e.css.map",
-  "main.js": "static/js/main.48f341f0.js",
-  "main.js.map": "static/js/main.48f341f0.js.map",
-  "static/media/icon-check.svg": "static/media/icon-check.fa9b4dd4.svg",
-  "static/media/logo.svg": "static/media/logo.38b3903b.svg"
+  "main.css": "static/css/main.3cebde9c.css",
+  "main.css.map": "static/css/main.3cebde9c.css.map",
+  "main.js": "static/js/main.51b10d8d.js",
+  "main.js.map": "static/js/main.51b10d8d.js.map",
+  "static/media/MathLogo.svg": "static/media/MathLogo.02398e27.svg",
+  "static/media/MonkeyLogo.svg": "static/media/MonkeyLogo.38b3903b.svg",
+  "static/media/icon-check.svg": "static/media/icon-check.fa9b4dd4.svg"
 }

@@ -1,21 +1,16 @@
 import React from 'react';
 import Question from '../components/Question';
 import QuestionCount from '../components/QuestionCount';
-import AnswerOption from '../components/AnswerOption';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
+import AnswerForm from './AnswerForm';
+import QuizTimer from './QuizTimer';
 
 function Quiz(props) {
 
   function renderAnswerBox() {
     return (
-      <input type="number" value='' autofocus="autofocus" onChange={checkAnswerBox} />
+      <AnswerForm handleSubmit={props.onAnswer} handleChange={props.onChange} value={props.value}/>
     );
-  }
-
-  function checkAnswerBox(event) {
-    if (event.key === 'Enter') {
-      alert(event.value);
-    }
   }
 
   return (
@@ -33,8 +28,10 @@ function Quiz(props) {
           counter={props.questionId + 1}
           total={props.questionTotal}
         />
+        <div>{props.numCorrect} correct</div>
         <Question content={props.question} />
         {renderAnswerBox()}
+        <QuizTimer start={props.start} />
       </div>
     </ReactCSSTransitionGroup>
   );

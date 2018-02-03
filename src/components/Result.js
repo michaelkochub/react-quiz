@@ -17,7 +17,7 @@ function Result(props) {
     >
       <div>
         <div className="forAwesomeButton">
-          <strong>{props.quizResult}</strong>!
+          <strong>{props.quizResult}</strong>
         </div>
         <div className="forAwesomeButton">
           <AwesomeButton action={props.onRestartClicked}>Play again!</AwesomeButton>
